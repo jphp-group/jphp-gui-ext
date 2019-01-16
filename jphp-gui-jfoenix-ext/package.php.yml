@@ -1,0 +1,25 @@
+
+name: jphp-gui-jfoenix-ext
+version: 2.0.0
+description: Material UI components for JavaFX.
+
+jfx:
+  version: 11.0.1
+
+plugins: [Doc, Hub, Gradle]
+
+deps:
+  jphp-gui-ext: '*'
+
+doc:
+  url-prefix: 'https://github.com/jphp-group/jphp-gui-ext/blob/master/%name%/api-docs/'
+  stub-dirs: ['./src/main/resources/JPHP-INF/sdk']
+  langs: {en: English, ru: Русский}
+
+gradle:
+  deps:
+  - 'com.jfoenix:jfoenix:9.0.8'
+  providedDeps:
+  - 'org.openjfx:javafx-base:%jfx.version%:linux'
+  - 'org.openjfx:javafx-graphics:%jfx.version%:linux'
+  - 'org.openjfx:javafx-controls:%jfx.version%:linux'

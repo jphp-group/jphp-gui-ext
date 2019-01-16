@@ -1,0 +1,41 @@
+
+name: jphp-gui-ext
+version: 2.1.2
+description: GUI based on JavaFX 11 library.
+
+deps:
+  jphp-core: '*'
+  jphp-xml-ext: '*'
+  jphp-graphic-ext: '*'
+
+jfx:
+  version: 11.0.1
+
+plugins: [Doc, Hub, Gradle]
+
+doc:
+  url-prefix: 'https://github.com/jphp-group/jphp-gui-ext/blob/master/%name%/api-docs/'
+  stub-dirs: ['./src/main/resources/JPHP-INF/sdk']
+  langs: {en: English, ru: Русский}
+
+
+gradle:
+  providedDeps:
+  - 'org.openjfx:javafx-base:%jfx.version%:linux'
+  - 'org.openjfx:javafx-graphics:%jfx.version%:linux'
+  - 'org.openjfx:javafx-controls:%jfx.version%:linux'
+  - 'org.openjfx:javafx-web:%jfx.version%:linux'
+  - 'org.openjfx:javafx-fxml:%jfx.version%:linux'
+  - 'org.openjfx:javafx-media:%jfx.version%:linux'
+  - 'org.openjfx:javafx-swing:%jfx.version%:linux'
+
+
+history:
+  2.1.2:
+  - Small Fixes
+  2.1.1:
+  - Add Paint, LinearGradient, etc. Now UXImage can be writen.
+  2.0.0:
+  - Migrate to OpenJFX 11.
+  1.0.1:
+  - Add bridge api for webView.

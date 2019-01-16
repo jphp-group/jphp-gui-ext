@@ -1,0 +1,27 @@
+
+name: jphp-gui-game-ext
+version: 2.0.1
+description: Game Addon for GUI JavaFX library.
+
+jfx:
+  version: 11.0.1
+
+deps:
+  jphp-gui-ext: '*'
+
+plugins: [Doc, Hub, Gradle]
+
+doc:
+  url-prefix: 'https://github.com/jphp-group/jphp-gui-ext/blob/master/%name%/api-docs/'
+  stub-dirs: ['./src/main/resources/JPHP-INF/sdk']
+  langs: {en: English, ru: Русский}
+
+gradle:
+  deps:
+  - 'org.dyn4j:dyn4j:3.2.1'
+  providedDeps:
+  - 'org.openjfx:javafx-base:%jfx.version%:linux'
+  - 'org.openjfx:javafx-graphics:%jfx.version%:linux'
+  - 'org.openjfx:javafx-controls:%jfx.version%:linux'
+
+config:

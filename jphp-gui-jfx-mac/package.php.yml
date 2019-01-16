@@ -1,0 +1,25 @@
+
+name: jphp-gui-jfx-mac
+version: 11.0.1
+description: MacOS JavaFX module
+
+jfx:
+  os: mac
+
+plugins: [Doc, Hub, Gradle]
+
+doc:
+  url-prefix: 'https://github.com/jphp-group/jphp-gui-ext/blob/master/%name%/api-docs/'
+  stub-dirs: ['./src/main/resources/JPHP-INF/sdk']
+  langs: {en: English, ru: Русский}
+
+gradle:
+  deps:
+  - 'org.openjfx:javafx-base:%version%:%jfx.os%'
+  - 'org.openjfx:javafx-graphics:%version%:%jfx.os%'
+  - 'org.openjfx:javafx-controls:%version%:%jfx.os%'
+  - 'org.openjfx:javafx-web:%version%:%jfx.os%'
+  - 'org.openjfx:javafx-fxml:%version%:%jfx.os%'
+  - 'org.openjfx:javafx-media:%version%:%jfx.os%'
+  - 'org.openjfx:javafx-swing:%version%:%jfx.os%'
+

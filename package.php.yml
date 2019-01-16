@@ -1,0 +1,18 @@
+name: jphp-gui-base
+version: 1.0.0
+type: project
+
+plugins: [Doc, Hub]
+
+hub:
+  login: d.zayceff@gmail.com
+
+modules:
+  - jphp-gui-ext
+  - jphp-gui-desktop-ext
+  - jphp-gui-game-ext
+  - jphp-gui-jfoenix-ext
+  - jphp-gui-systemtray-ext
+  - jphp-gui-jfx-linux
+  - jphp-gui-jfx-win
+  - jphp-gui-jfx-mac
