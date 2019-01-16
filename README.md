@@ -2,6 +2,8 @@
 
 A gui extension for JPHP based on JavaFX 11+.
 
+- Requires Oracle or Open JDK 11+
+
 ### Packages
 
 - jphp-gui-ext - base extension.
