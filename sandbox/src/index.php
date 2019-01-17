@@ -1,6 +1,7 @@
 <?php
 
 use php\gui\{UXApplication, UXDialog, UXForm, UXLabel, layout\UXVBox, UXMaterialButton};
+use php\desktop\{Mouse};
 use php\lang\{System};
 
 UXApplication::runLater(function() {
@@ -16,7 +17,7 @@ UXApplication::runLater(function() {
     $btn->buttonType = 'RAISED';
     $btn->backgroundColor = 'white';
     $btn->on('click', function() use ($label) {
-        $label->text = 'Clicked!';
+        $label->text = 'Clicked! X: ' . Mouse::x() . ",  Y: " + Mouse::y();
     });
 
     $form->layout = new UXVBox();

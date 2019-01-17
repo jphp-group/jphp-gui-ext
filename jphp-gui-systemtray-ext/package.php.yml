@@ -3,6 +3,9 @@ name: jphp-gui-systemtray-ext
 version: 2.0.0
 description: GUI System Tray.
 
+jfx:
+  version: 11.0.1
+
 plugins: [Doc, Hub, Gradle]
 
 deps:
@@ -13,3 +16,9 @@ doc:
   stub-dirs: ['./src/main/resources/JPHP-INF/sdk']
   langs: {en: English, ru: Русский}
 
+gradle:
+  providedDeps:
+    - 'org.openjfx:javafx-base:%jfx.version%:linux'
+    - 'org.openjfx:javafx-graphics:%jfx.version%:linux'
+    - 'org.openjfx:javafx-controls:%jfx.version%:linux'
+    - 'org.openjfx:javafx-swing:%jfx.version%:linux'
