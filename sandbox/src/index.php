@@ -17,7 +17,7 @@ UXApplication::runLater(function() {
     $btn->buttonType = 'RAISED';
     $btn->backgroundColor = 'white';
     $btn->on('click', function() use ($label) {
-        $label->text = 'Clicked! X: ' . Mouse::x() . ",  Y: " + Mouse::y();
+        $label->text = 'Clicked! X: ' . Mouse::x() . ",  Y: " . Mouse::y();
     });
 
     $form->layout = new UXVBox();
