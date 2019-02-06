@@ -13,7 +13,6 @@ deps:
 
 doc:
   url-prefix: 'https://github.com/jphp-group/jphp-gui-ext/blob/master/%name%/api-docs/'
-  stub-dirs: ['./src/main/resources/JPHP-INF/sdk']
   langs: {en: English, ru: Русский}
 
 gradle:
