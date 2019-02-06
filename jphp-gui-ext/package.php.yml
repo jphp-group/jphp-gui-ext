@@ -1,6 +1,6 @@
 
 name: jphp-gui-ext
-version: 2.1.2
+version: 2.1.3
 description: GUI based on JavaFX 11 library.
 
 deps:
@@ -15,7 +15,6 @@ plugins: [Doc, Hub, Gradle]
 
 doc:
   url-prefix: 'https://github.com/jphp-group/jphp-gui-ext/blob/master/%name%/api-docs/'
-  stub-dirs: ['./src/main/resources/JPHP-INF/sdk']
   langs: {en: English, ru: Русский}
 
 
