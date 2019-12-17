@@ -4,6 +4,7 @@ namespace php\gui;
 use php\gui\effect\UXEffect;
 use php\gui\effect\UXEffectPipeline;
 use php\gui\event\UXEvent;
+use php\gui\transform\UXTransform;
 use php\lang\IllegalArgumentException;
 use php\gui\UXList;
 
@@ -296,6 +297,11 @@ abstract class UXNode
      * @var array
      */
     public $boundsInParent = ['x' => 0.0, 'y' => 0.0, 'z' => 0.0, 'width' => 0.0, 'height' => 0.0, 'depth' => 0.0];
+
+    /**
+     * @var UXList of UXTransform
+     */
+    public $transforms;
 
     /**
      * UXNode constructor.

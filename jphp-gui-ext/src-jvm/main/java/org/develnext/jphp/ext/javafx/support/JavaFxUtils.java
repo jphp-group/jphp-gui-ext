@@ -74,7 +74,7 @@ final public class JavaFxUtils {
     }
 
     @SuppressWarnings("unchecked")
-    public static <T extends Node> void trigger(T object, String event, Event e) {
+    public static <T> void trigger(T object, String event, Event e) {
         EventProvider eventProvider = EventProvider.get(object, event);
 
         if (eventProvider != null) {

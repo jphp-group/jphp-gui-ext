@@ -5,6 +5,7 @@ import javafx.event.Event;
 import javafx.util.Duration;
 import org.develnext.jphp.ext.javafx.JavaFXExtension;
 import org.develnext.jphp.ext.javafx.support.EventProvider;
+import org.develnext.jphp.ext.javafx.support.JavaFxUtils;
 import php.runtime.annotation.Reflection;
 import php.runtime.annotation.Reflection.Abstract;
 import php.runtime.annotation.Reflection.Name;
@@ -72,13 +73,7 @@ public class UXAnimation<T extends Animation> extends BaseWrapper<Animation> {
     @Reflection.Signature
     @SuppressWarnings("unchecked")
     public void on(String event, Invoker invoker, String group) {
-        EventProvider eventProvider = EventProvider.get(getWrappedObject(), event);
-
-        if (eventProvider != null) {
-            eventProvider.on(getWrappedObject(), event, group, invoker);
-        } else {
-            throw new IllegalArgumentException("Unable to find the '"+event+"' event type");
-        }
+        JavaFxUtils.on(this.getWrappedObject(), event, invoker, group);
     }
 
     @Reflection.Signature
@@ -89,13 +84,7 @@ public class UXAnimation<T extends Animation> extends BaseWrapper<Animation> {
     @Reflection.Signature
     @SuppressWarnings("unchecked")
     public void off(String event, @Reflection.Nullable String group) {
-        EventProvider eventProvider = EventProvider.get(getWrappedObject(), event);
-
-        if (eventProvider != null) {
-            eventProvider.off(getWrappedObject(), event, group);
-        } else {
-            throw new IllegalArgumentException("Unable to find the '"+event+"' event type");
-        }
+        JavaFxUtils.off(this.getWrappedObject(), event, group);
     }
 
     @Reflection.Signature
@@ -105,12 +94,6 @@ public class UXAnimation<T extends Animation> extends BaseWrapper<Animation> {
 
     @Reflection.Signature
     public void trigger(String event, @Reflection.Nullable Event e) {
-        EventProvider eventProvider = EventProvider.get(getWrappedObject(), event);
-
-        if (eventProvider != null) {
-            eventProvider.trigger(getWrappedObject(), event, e);
-        } else {
-            throw new IllegalArgumentException("Unable to find the '"+event+"' event type");
-        }
+        JavaFxUtils.trigger(this.getWrappedObject(), event, e);
     }
 }
