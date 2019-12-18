@@ -38,6 +38,7 @@ import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import javafx.scene.text.Font;
+import javafx.scene.transform.*;
 import javafx.scene.web.*;
 import javafx.stage.*;
 import javafx.stage.Window;
@@ -55,6 +56,7 @@ import org.develnext.jphp.ext.javafx.classes.printing.UXPrinter;
 import org.develnext.jphp.ext.javafx.classes.printing.UXPrinterJob;
 import org.develnext.jphp.ext.javafx.classes.shape.*;
 import org.develnext.jphp.ext.javafx.classes.text.UXFont;
+import org.develnext.jphp.ext.javafx.classes.transform.*;
 import org.develnext.jphp.ext.javafx.support.EventProvider;
 import org.develnext.jphp.ext.javafx.support.ImageViewEx;
 import org.develnext.jphp.ext.javafx.support.KeyboardManager;
@@ -99,6 +101,10 @@ public class JavaFXExtension extends Extension {
         registerMemoryOperation(BoundsMemoryOperation.class);
         registerMemoryOperation(IndexRangeMemoryOperation.class);
         registerMemoryOperation(CycleMethodMemoryOperation.class);
+
+        registerMemoryOperation(Point2DMemoryOperation.class);
+        registerMemoryOperation(Point3DMemoryOperation.class);
+        registerMemoryOperation(MatrixTypeMemoryOperation.class);
 
         registerClass(scope, UXGeometry.class);
 
@@ -253,8 +259,18 @@ public class JavaFXExtension extends Extension {
         registerEffectPackage(scope);
         registerAnimationPackage(scope);
         registerPrinterPackage(scope);
+        registerTransformPackage(scope);
 
         registerEvents(scope);
+    }
+
+    protected void registerTransformPackage(CompileScope scope){
+        registerWrapperClass(scope, Transform.class, UXTransform.class);
+        registerWrapperClass(scope, Rotate.class, UXRotate.class);
+        registerWrapperClass(scope, Scale.class, UXScale.class);
+        registerWrapperClass(scope, Shear.class, UXShear.class);
+        registerWrapperClass(scope, Translate.class, UXTranslate.class);
+        registerWrapperClass(scope, Affine.class, UXAffine.class);
     }
 
     protected void registerCustomControls(CompileScope scope) {
@@ -317,6 +333,7 @@ public class JavaFXExtension extends Extension {
         registerEventProvider(new RadioGroupPaneEventProvider());
 
         registerEventProvider(new AnimationEventProvider());
+        registerEventProvider(new TransformEventProvider());
         registerEventProvider(new TrayNotificationEventProvider());
 
         registerWrapperClass(scope, KeyboardManager.class, UXKeyboardManager.class);

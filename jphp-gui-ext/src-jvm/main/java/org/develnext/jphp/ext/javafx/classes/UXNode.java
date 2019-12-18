@@ -22,6 +22,7 @@ import javafx.scene.layout.Border;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
+import javafx.scene.transform.Transform;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import org.develnext.jphp.ext.javafx.JavaFXExtension;
@@ -141,6 +142,9 @@ public class UXNode<T extends Node> extends BaseWrapper<Node> implements Eventab
 
         @Property("classes")
         ObservableList<String> styleClass();
+
+        @Property()
+        ObservableList<Transform> transforms();
 
         //@Property(hiddenInDebugInfo = true) @Nullable Object userData();
 
