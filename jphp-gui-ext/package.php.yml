@@ -1,6 +1,6 @@
 
 name: jphp-gui-ext
-version: 2.1.3
+version: 2.1.4
 description: GUI based on JavaFX 11 library.
 
 deps:
@@ -30,6 +30,8 @@ gradle:
 
 
 history:
+  2.1.4:
+  - Fix colorPicker.value property bugs.
   2.1.2:
   - Small Fixes
   2.1.1:
