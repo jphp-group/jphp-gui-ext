@@ -1,5 +1,6 @@
 <?php
 
+use php\gui\icons\UXFontAwesomeIcon;
 use php\gui\{UXApplication, UXDialog, UXForm, UXLabel, layout\UXVBox, UXMaterialButton};
 use php\desktop\{Mouse};
 use php\lang\{System};
@@ -14,6 +15,7 @@ UXApplication::runLater(function() {
 
     $btn = new UXMaterialButton('Button');
     $btn->size = [120, 30];
+    $btn->graphic = new UXFontAwesomeIcon('check', "3em", "green");
     $btn->buttonType = 'RAISED';
     $btn->backgroundColor = 'white';
     $btn->on('click', function() use ($label) {

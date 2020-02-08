@@ -7,7 +7,7 @@ jfx:
   version: 11.0.1
 
 deps:
-  jphp-gui-ext: '*'
+  jphp-gui-ext: ^2.0.0
 
 plugins: [Doc, Hub, Gradle]
 
@@ -22,5 +22,3 @@ gradle:
   - 'org.openjfx:javafx-base:%jfx.version%:linux'
   - 'org.openjfx:javafx-graphics:%jfx.version%:linux'
   - 'org.openjfx:javafx-controls:%jfx.version%:linux'
-
-config:

@@ -1,6 +1,7 @@
 
 include 'jphp-gui-ext'
 include 'jphp-gui-desktop-ext'
+include 'jphp-gui-fonticons-ext'
 include 'jphp-gui-game-ext'
 include 'jphp-gui-jfoenix-ext'
 include 'jphp-gui-systemtray-ext'

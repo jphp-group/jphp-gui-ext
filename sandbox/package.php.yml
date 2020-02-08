@@ -10,6 +10,7 @@ requires:
 
 deps:
   jphp-core: '*'
+  jphp-gui-fonticons-ext: '^1.0.0'
   jphp-gui-ext: '^2.0.0'
   jphp-gui-jfoenix-ext: '^2.0.0'
   jphp-gui-desktop-ext: '^2.0.0'

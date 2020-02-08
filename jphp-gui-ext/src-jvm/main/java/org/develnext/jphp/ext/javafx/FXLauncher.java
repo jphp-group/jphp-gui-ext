@@ -14,6 +14,7 @@ import org.develnext.jphp.ext.javafx.classes.UXImage;
 import org.develnext.jphp.ext.javafx.support.ImageViewEx;
 import php.runtime.Memory;
 import php.runtime.env.DieException;
+import php.runtime.ext.core.classes.time.WrapTimer;
 import php.runtime.lang.spl.exception.RuntimeException;
 import php.runtime.launcher.LaunchException;
 import php.runtime.launcher.Launcher;

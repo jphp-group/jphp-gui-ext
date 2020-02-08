@@ -10,6 +10,7 @@ hub:
 modules:
   - jphp-gui-ext
   - jphp-gui-desktop-ext
+  - jphp-gui-fonticon-ext
   - jphp-gui-game-ext
   - jphp-gui-jfoenix-ext
   - jphp-gui-systemtray-ext

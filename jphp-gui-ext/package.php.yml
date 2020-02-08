@@ -1,6 +1,6 @@
 
 name: jphp-gui-ext
-version: 2.1.4
+version: 2.1.5
 description: GUI based on JavaFX 11 library.
 
 deps:
@@ -17,7 +17,7 @@ doc:
   url-prefix: 'https://github.com/jphp-group/jphp-gui-ext/blob/master/%name%/api-docs/'
   langs: {en: English, ru: Русский}
 
-
+  implementation 'de.jensd:fontawesomefx-commons:11.0'
 gradle:
   providedDeps:
   - 'org.openjfx:javafx-base:%jfx.version%:linux'
@@ -30,6 +30,8 @@ gradle:
 
 
 history:
+  2.1.5:
+  - Add Timer.shutdownAll() on close in FXLauncher
   2.1.4:
   - Fix colorPicker.value property bugs.
   2.1.2:

@@ -1,0 +1,29 @@
+
+name: jphp-gui-fonticons-ext
+version: 1.0.0
+description: FontAwesome icons for GUI
+
+plugins: [Doc, Hub, Gradle]
+
+jfx:
+  version: 11.0.1
+
+deps:
+  jphp-gui-ext: '*'
+
+doc:
+  url-prefix: 'https://github.com/jphp-group/jphp-gui-ext/blob/master/%name%/api-docs/'
+  langs: {en: English, ru: Русский}
+
+gradle:
+  repos:
+    - 'https://jcenter.bintray.com/'
+  deps:
+    - 'de.jensd:fontawesomefx-commons:11.0'
+    - 'de.jensd:fontawesomefx-fontawesome:4.7.0-9.1.2'
+  providedDeps:
+    - 'org.openjfx:javafx-base:%jfx.version%:linux'
+    - 'org.openjfx:javafx-graphics:%jfx.version%:linux'
+    - 'org.openjfx:javafx-controls:%jfx.version%:linux'
+    - 'org.openjfx:javafx-swing:%jfx.version%:linux'
+
