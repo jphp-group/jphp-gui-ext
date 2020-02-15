@@ -1,6 +1,6 @@
 
 name: jphp-gui-jfx-mac
-version: 11.0.1
+version: 13.0.2
 description: MacOS JavaFX module
 
 jfx:
@@ -18,7 +18,6 @@ gradle:
   - 'org.openjfx:javafx-base:%version%:%jfx.os%'
   - 'org.openjfx:javafx-graphics:%version%:%jfx.os%'
   - 'org.openjfx:javafx-controls:%version%:%jfx.os%'
-  - 'org.openjfx:javafx-web:%version%:%jfx.os%'
   - 'org.openjfx:javafx-fxml:%version%:%jfx.os%'
   - 'org.openjfx:javafx-media:%version%:%jfx.os%'
   - 'org.openjfx:javafx-swing:%version%:%jfx.os%'

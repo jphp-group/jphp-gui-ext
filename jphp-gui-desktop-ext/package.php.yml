@@ -1,15 +1,15 @@
 
 name: jphp-gui-desktop-ext
-version: 2.0.1
+version: 3.0.0
 description: Desktop features.
 
 jfx:
-  version: 11.0.1
+  version: 13.0.2
 
 plugins: [Doc, Hub, Gradle]
 
 deps:
-  jphp-gui-ext: '*'
+  jphp-gui-ext: ^3.0.0
 
 doc:
   url-prefix: 'https://github.com/jphp-group/jphp-gui-ext/blob/master/%name%/api-docs/'

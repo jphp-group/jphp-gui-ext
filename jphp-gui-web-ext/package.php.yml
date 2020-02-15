@@ -1,15 +1,10 @@
 
-name: jphp-gui-ext
+name: jphp-gui-web-ext
 version: 3.0.0
-description: GUI based on JavaFX 11 library.
+description: Webkit Browser for JavaFX gui-ext
 
 deps:
-  jphp-core: '*'
-  jphp-xml-ext: '*'
-  jphp-graphic-ext: '*'
-
-jvm-modules:
- - 'java.scripting'
+  jphp-gui-ext: ^3.0.0
 
 jfx:
   version: 13.0.2
@@ -24,25 +19,9 @@ gradle:
   - 'org.openjfx:javafx-base:%jfx.version%:linux'
   - 'org.openjfx:javafx-graphics:%jfx.version%:linux'
   - 'org.openjfx:javafx-controls:%jfx.version%:linux'
+  - 'org.openjfx:javafx-web:%jfx.version%:linux'
   - 'org.openjfx:javafx-fxml:%jfx.version%:linux'
   - 'org.openjfx:javafx-media:%jfx.version%:linux'
   - 'org.openjfx:javafx-swing:%jfx.version%:linux'
 
 
-history:
-  3.0.0:
-  - OpenJFX 13
-  2.1.6:
-  - Fix jlink support.
-  2.1.5:
-  - Add Timer.shutdownAll() on close in FXLauncher.
-  2.1.4:
-  - Fix colorPicker.value property bugs.
-  2.1.2:
-  - Small Fixes
-  2.1.1:
-  - Add Paint, LinearGradient, etc. Now UXImage can be writen.
-  2.0.0:
-  - Migrate to OpenJFX 11.
-  1.0.1:
-  - Add bridge api for webView.

@@ -9,11 +9,15 @@ hub:
 
 modules:
   - jphp-gui-ext
+  - jphp-gui-web-ext
   - jphp-gui-desktop-ext
-  - jphp-gui-fonticon-ext
+  - jphp-gui-fonticons-ext
   - jphp-gui-game-ext
   - jphp-gui-jfoenix-ext
   - jphp-gui-systemtray-ext
   - jphp-gui-jfx-linux
+  - jphp-gui-jfx-web-linux
   - jphp-gui-jfx-win
+  - jphp-gui-jfx-web-win
   - jphp-gui-jfx-mac
+  - jphp-gui-jfx-web-mac

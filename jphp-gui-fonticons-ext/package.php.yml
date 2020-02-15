@@ -1,15 +1,15 @@
 
 name: jphp-gui-fonticons-ext
-version: 1.0.0
+version: 3.0.0
 description: FontAwesome icons for GUI
 
 plugins: [Doc, Hub, Gradle]
 
 jfx:
-  version: 11.0.1
+  version: 13.0.2
 
 deps:
-  jphp-gui-ext: '*'
+  jphp-gui-ext: ^3.0.0
 
 doc:
   url-prefix: 'https://github.com/jphp-group/jphp-gui-ext/blob/master/%name%/api-docs/'
@@ -19,11 +19,29 @@ gradle:
   repos:
     - 'https://jcenter.bintray.com/'
   deps:
-    - 'de.jensd:fontawesomefx-commons:11.0'
     - 'de.jensd:fontawesomefx-fontawesome:4.7.0-9.1.2'
+    - 'de.jensd:fontawesomefx-icons525:4.2.0-9.1.2'
+  implDeps:
+    - {
+      dep: 'de.jensd:fontawesomefx-commons:11.0',
+      exclude: [
+        'org.openjfx:javafx-base',
+        'org.openjfx:javafx-base:mac',
+        'org.openjfx:javafx-controls',
+        'org.openjfx:javafx-controls:mac',
+        'org.openjfx:javafx-fxml',
+        'org.openjfx:javafx-fxml:mac'
+      ]
+    }
+
   providedDeps:
     - 'org.openjfx:javafx-base:%jfx.version%:linux'
     - 'org.openjfx:javafx-graphics:%jfx.version%:linux'
     - 'org.openjfx:javafx-controls:%jfx.version%:linux'
     - 'org.openjfx:javafx-swing:%jfx.version%:linux'
 
+
+
+history:
+  1.0.1:
+    - Add 525 Icons Library (https://525icons.com/)

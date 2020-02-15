@@ -38,10 +38,8 @@ import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import javafx.scene.text.Font;
-import javafx.scene.web.*;
 import javafx.stage.*;
 import javafx.stage.Window;
-import netscape.javascript.JSException;
 import org.develnext.jphp.ext.javafx.bind.*;
 import org.develnext.jphp.ext.javafx.classes.*;
 import org.develnext.jphp.ext.javafx.classes.animation.*;
@@ -172,10 +170,6 @@ public class JavaFXExtension extends Extension {
         registerWrapperClass(scope, ColorPicker.class, UXColorPicker.class);
         registerWrapperClass(scope, ProgressIndicator.class, UXProgressIndicator.class);
         registerWrapperClass(scope, ProgressBar.class, UXProgressBar.class);
-        registerWrapperClass(scope, HTMLEditor.class, UXHtmlEditor.class);
-        registerWrapperClass(scope, WebHistory.class, UXWebHistory.class);
-        registerWrapperClass(scope, WebEngine.class, UXWebEngine.class);
-        registerWrapperClass(scope, WebView.class, UXWebView.class);
         registerWrapperClass(scope, Tab.class, UXTab.class);
         registerWrapperClass(scope, DraggableTab.class, UXDraggableTab.class);
         registerWrapperClass(scope, TabPane.class, UXTabPane.class);
@@ -227,8 +221,6 @@ public class JavaFXExtension extends Extension {
         registerWrapperClass(scope, WindowEvent.class, UXWindowEvent.class);
         registerWrapperClass(scope, ContextMenuEvent.class, UXContextMenuEvent.class);
         registerWrapperClass(scope, DragEvent.class, UXDragEvent.class);
-        registerWrapperClass(scope, WebEvent.class, UXWebEvent.class);
-        registerWrapperClass(scope, WebErrorEvent.class, UXWebErrorEvent.class);
         registerWrapperClass(scope, ScrollEvent.class, UXScrollEvent.class);
 
         registerWrapperClass(scope, FXMLLoader.class, UXLoader.class);
@@ -246,8 +238,6 @@ public class JavaFXExtension extends Extension {
 
         registerClass(scope, UXDialog.class);
         registerClass(scope, UXClipboard.class);
-
-        registerJavaException(scope, WrapJSException.class, JSException.class);
 
         registerCustomControls(scope);
         registerEffectPackage(scope);
@@ -309,7 +299,6 @@ public class JavaFXExtension extends Extension {
         registerEventProvider(new MenuButtonEventProvider());
         registerEventProvider(new ComboBoxBaseEventProvider());
         registerEventProvider(new ChoiceBoxEventProvider());
-        registerEventProvider(new WebEngineEventProvider());
         registerEventProvider(new TreeViewEventProvider());
         registerEventProvider(new TabEventProvider());
         registerEventProvider(new TabPaneEventProvider());
