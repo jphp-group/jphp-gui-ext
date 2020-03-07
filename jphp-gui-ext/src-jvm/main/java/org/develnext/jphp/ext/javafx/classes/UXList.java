@@ -11,6 +11,7 @@ import php.runtime.annotation.Reflection.Getter;
 import php.runtime.annotation.Reflection.Name;
 import php.runtime.annotation.Reflection.Signature;
 import php.runtime.common.Callback;
+import php.runtime.common.HintType;
 import php.runtime.common.Messages;
 import php.runtime.env.Environment;
 import php.runtime.env.TraceInfo;
@@ -305,7 +306,12 @@ public class UXList<T> extends BaseWrapper<ObservableList<T>> implements Iterato
     }
 
     @Override
-    @Signature
+    @Signature(
+            value = {@Reflection.Arg("offset")},
+            result = @Reflection.Arg(
+                    type = HintType.BOOLEAN
+            )
+    )
     public Memory offsetExists(Environment environment, Memory... memories) {
         ObservableList list = getWrappedObject();
         int index = memories[0].toInteger();
@@ -314,7 +320,7 @@ public class UXList<T> extends BaseWrapper<ObservableList<T>> implements Iterato
     }
 
     @Override
-    @Signature
+    @Signature({@Reflection.Arg("offset")})
     public Memory offsetGet(Environment environment, Memory... memories) {
         ObservableList list = getWrappedObject();
         int index = memories[0].toInteger();
@@ -323,7 +329,7 @@ public class UXList<T> extends BaseWrapper<ObservableList<T>> implements Iterato
     }
 
     @Override
-    @Signature
+    @Signature({@Reflection.Arg("offset"), @Reflection.Arg("value")})
     public Memory offsetSet(Environment environment, Memory... memories) {
         if (memories[0].isNull()) {
             getWrappedObject().add(unwrap(environment, memories[1], "offsetSet"));
@@ -336,7 +342,7 @@ public class UXList<T> extends BaseWrapper<ObservableList<T>> implements Iterato
     }
 
     @Override
-    @Signature
+    @Signature({@Reflection.Arg("offset")})
     public Memory offsetUnset(Environment environment, Memory... memories) {
         ObservableList list = getWrappedObject();
         int index = memories[0].toInteger();
