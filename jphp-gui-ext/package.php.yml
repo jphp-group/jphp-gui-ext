@@ -1,6 +1,6 @@
 
 name: jphp-gui-ext
-version: 3.0.0
+version: 3.0.1
 description: GUI based on JavaFX 11 library.
 
 deps:

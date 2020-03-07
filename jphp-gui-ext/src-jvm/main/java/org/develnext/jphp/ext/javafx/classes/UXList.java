@@ -305,6 +305,7 @@ public class UXList<T> extends BaseWrapper<ObservableList<T>> implements Iterato
     }
 
     @Override
+    @Signature
     public Memory offsetExists(Environment environment, Memory... memories) {
         ObservableList list = getWrappedObject();
         int index = memories[0].toInteger();
@@ -313,6 +314,7 @@ public class UXList<T> extends BaseWrapper<ObservableList<T>> implements Iterato
     }
 
     @Override
+    @Signature
     public Memory offsetGet(Environment environment, Memory... memories) {
         ObservableList list = getWrappedObject();
         int index = memories[0].toInteger();
@@ -321,6 +323,7 @@ public class UXList<T> extends BaseWrapper<ObservableList<T>> implements Iterato
     }
 
     @Override
+    @Signature
     public Memory offsetSet(Environment environment, Memory... memories) {
         if (memories[0].isNull()) {
             getWrappedObject().add(unwrap(environment, memories[1], "offsetSet"));
@@ -333,6 +336,7 @@ public class UXList<T> extends BaseWrapper<ObservableList<T>> implements Iterato
     }
 
     @Override
+    @Signature
     public Memory offsetUnset(Environment environment, Memory... memories) {
         ObservableList list = getWrappedObject();
         int index = memories[0].toInteger();
