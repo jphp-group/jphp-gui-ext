@@ -7,7 +7,7 @@ jfx:
   version: 13.0.2
 
 deps:
-  jphp-gui-ext: ^2.0.0
+  jphp-gui-ext: ^3.0.0
 
 plugins: [Doc, Hub, Gradle]
 

@@ -1,10 +1,11 @@
 
 name: jphp-gui-jfx-web-mac
-version: 13.0.2
+version: 14.0.0
 description: Mac JavaFX module for WebKit
 
 jfx:
   os: mac
+  version: 14
 
 plugins: [Doc, Hub, Gradle]
 
@@ -15,12 +16,13 @@ doc:
 
 gradle:
   providedDeps:
-    - 'org.openjfx:javafx-base:%version%:%jfx.os%'
-    - 'org.openjfx:javafx-graphics:%version%:%jfx.os%'
-    - 'org.openjfx:javafx-controls:%version%:%jfx.os%'
-    - 'org.openjfx:javafx-fxml:%version%:%jfx.os%'
-    - 'org.openjfx:javafx-media:%version%:%jfx.os%'
-    - 'org.openjfx:javafx-swing:%version%:%jfx.os%'
+    - 'org.openjfx:javafx-base:%jfx.version%:%jfx.os%'
+    - 'org.openjfx:javafx-graphics:%jfx.version%:%jfx.os%'
+    - 'org.openjfx:javafx-controls:%jfx.version%:%jfx.os%'
+    - 'org.openjfx:javafx-fxml:%jfx.version%:%jfx.os%'
+    - 'org.openjfx:javafx-media:%jfx.version%:%jfx.os%'
+    - 'org.openjfx:javafx-swing:%jfx.version%:%jfx.os%'
   deps:
-  - 'org.openjfx:javafx-web:%version%:%jfx.os%'
+    - 'org.openjfx:javafx-web:%jfx.version%:%jfx.os%'
+
 
