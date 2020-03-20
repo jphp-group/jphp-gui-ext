@@ -1,10 +1,13 @@
 
 name: jphp-gui-game-ext
-version: 3.0.0
+version: 3.0.1
 description: Game Addon for GUI JavaFX library.
 
 jfx:
   version: 13.0.2
+
+sources:
+  - src
 
 deps:
   jphp-gui-ext: ^3.0.0
